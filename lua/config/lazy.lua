@@ -23,6 +23,14 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.json" },
     { import = "lazyvim.plugins.extras.ui.mini-animate" },
 
+    { import = "lazyvim.plugins.extras.lang.python" },
+
+    -- For Rust (Includes rust-analyzer, debugging tools, and cargo integrations)
+    { import = "lazyvim.plugins.extras.lang.rust" },
+
+    -- For Godot / GDScript (Configures gdscript communication via standard omnisharp/lsp)
+    { import = "lazyvim.plugins.extras.lang.omega" }, -- Note: Godot config setups may vary slightly depending on your exact LazyVim version
+
     -- import/override with your plugins
     { import = "plugins" },
   },
