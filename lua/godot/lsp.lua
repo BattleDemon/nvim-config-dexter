@@ -68,6 +68,25 @@ return {
         end,
       },
       mapping = cmp.mapping.preset.insert({}),
+      sources = cmp.config.sources({
+        { name = "nvim_lsp" },
+      }, {
+        { name = "buffer" },
+      }),
+    })
+
+    local cmp_autopairs = require("nvim-autopairs.completion.cmp")
+    cmp.event:on("config_done", cmp_autopairs.on_config_done())
+
+    vim.diagnostic.config({
+      float = {
+        focusable = false,
+        style = "minimal",
+        border = "rounded",
+        source = "always",
+        header = "",
+        prefix = "",
+      },
     })
   end,
 }
